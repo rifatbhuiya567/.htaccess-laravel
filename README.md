@@ -1,9 +1,17 @@
 ```php
-//this will output data-uri (base64 image data)
-//something like data:image/png;base64,iVBORw0KGg....
-Avatar::create('Joko Widodo')->toBase64();
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
 
-//use in view
-//this will display initials JW as an image
-<img src="{{ Avatar::create('Joko Widodo')->toBase64() }}" />
+<Files .env>
+  Order allow,deny
+  Deny from all
+</Files>
+
+<Files composer.json>
+  Order allow,deny
+  Deny from all
+</Files>
 ```
