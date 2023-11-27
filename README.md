@@ -1,3 +1,6 @@
+## Laravel .htaccess code
+
+### Usage
 ```php
 <IfModule mod_rewrite.c>
   RewriteEngine on
